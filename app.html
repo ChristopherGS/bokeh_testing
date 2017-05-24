@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.5.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.5.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="432a4736-6af0-46c1-8c63-912972f9f88c"></div>
+        </div>
+        
+        <script type="text/javascript">
+            (function() {
+          var fn = function() {
+            Bokeh.safely(function() {
+              var docs_json = {"92a3c291-6064-413a-85b1-95b039bcb5ae":{"roots":{"references":[{"attributes":{},"id":"1ac40f62-3617-4341-919e-3dd9c69655b7","type":"StringFormatter"},{"attributes":{},"id":"f8dcb9e6-8c61-47e7-8cf8-e7eb354673ae","type":"DateFormatter"},{"attributes":{"editor":{"id":"8f5dbf80-f74f-4055-8c65-90784642b50b","type":"StringEditor"},"field":"dates","formatter":{"id":"f8dcb9e6-8c61-47e7-8cf8-e7eb354673ae","type":"DateFormatter"},"title":"Date"},"id":"4dbb6afe-2f4c-4b0b-a3c3-5b4a3dfa7fb1","type":"TableColumn"},{"attributes":{"children":[{"id":"7bd10309-03f7-4d6e-b911-dc1cdce46841","type":"DataTable"}]},"id":"589169b0-f43d-494b-a44a-41fffcdf8492","type":"WidgetBox"},{"attributes":{"columns":[{"id":"4dbb6afe-2f4c-4b0b-a3c3-5b4a3dfa7fb1","type":"TableColumn"},{"id":"f2909a6e-2e51-4c7d-90c8-369e3ba44d97","type":"TableColumn"}],"height":280,"source":{"id":"7e936a3b-d95f-44e5-996a-7b8ef1f5d219","type":"ColumnDataSource"},"width":400},"id":"7bd10309-03f7-4d6e-b911-dc1cdce46841","type":"DataTable"},{"attributes":{},"id":"d6a184de-cc21-4652-b16a-fefba74da8d9","type":"StringEditor"},{"attributes":{},"id":"8f5dbf80-f74f-4055-8c65-90784642b50b","type":"StringEditor"},{"attributes":{"editor":{"id":"d6a184de-cc21-4652-b16a-fefba74da8d9","type":"StringEditor"},"field":"count","formatter":{"id":"1ac40f62-3617-4341-919e-3dd9c69655b7","type":"StringFormatter"},"title":"Abort Count"},"id":"f2909a6e-2e51-4c7d-90c8-369e3ba44d97","type":"TableColumn"},{"attributes":{"callback":null,"column_names":["count","dates"],"data":{"count":[5,1,2,2,3,1,1,1,1,1,1,2,3,1,1,1,1,1,3,1,32,1,13,1,1,1,6,21,1,16,5,1,8,7,4,2,3,6,2,3,3,2,1,4,4,6,7,4,2,4,3,4,3,3,2,2,5,4,1,5,14,2,6,5,6,5,4,4,3,8,5,2,9,8,14,12,4,2,2,8,10,3,7,5,2,4,8,1,1,1,7,1,4,1,1,70],"dates":{"__ndarray__":"AACA5JWkdUIAAMB+Q6R1QgAAgMOSm3VCAADAXUCbdUIAAICV/5h1QgAAwC+tmHVCAAAAMxGXdUIAAEDNvpZ1QgAAwAEalnVCAACAoo+SdUIAAEDaTpB1QgAAgHT8j3VCAADA7aaGdUIAAMC/E4R1QgAAAFrBg3VCAADAkYCBdUIAAMC4MG51QgAAgPDva3VCAAAAJUtrdUIAAIDcfFx1QgAAgI3mUHVCAACAMcBLdUIAAMDLbUt1QgAAgJp2SnVCAADANCRKdUIAAIBs40d1QgAAgB1NPHVCAAAAMaUydUIAAEA0CTF1QgAAgM62MHVCAADAaGQwdUIAAIA3bS91QgAAwNEaL3VCAAAAbMgudUIAAEAGdi51QgAAgKAjLnVCAABAbywtdUIAAIAJ2ix1QgAAwKOHLHVCAAAAp+sqdUIAAEBBmSp1QgAAgNtGKnVCAAAAEKIpdUIAAMDeqih1QgAAAHlYKHVCAABAEwYodUIAAICtsyd1QgAAwEdhJ3VCAACAFmomdUIAAMCwFyZ1QgAAAEvFJXVCAABA5XIldUIAAIB/ICV1QgAAQE4pJHVCAACA6NYjdUIAAMCChCN1QgAAAB0yI3VCAABAt98idUIAAACG6CF1QgAAQCCWIXVCAACAukMhdUIAAMBU8SB1QgAAAO+eIHVCAACAx9MadUIAAMBhgRp1QgAAAPwuGnVCAABAltwZdUIAAABl5Rh1QgAAQP+SGHVCAACAmUAYdUIAAMAz7hd1QgAAAM6bF3VCAADAnKQWdUIAAAA3UhZ1QgAAQNH/FXVCAACAa60VdUIAAMAFWxV1QgAAgNRjFHVCAADAbhEUdUIAAECjbBN1QgAAgD0aE3VCAABADCMSdUIAAICm0BF1QgAAwEB+EXVCAAAA2ysRdUIAAEB12RB1QgAAAETiD3VCAABA3o8PdUIAAIB4PQ91QgAAwBLrDnVCAAAArZgOdUIAAEBHRg51QgAAwHuhDXVCAACAVzoGdUIAAICSXQJ1QgAAwN109nRC","dtype":"float64","shape":[96]}}},"id":"7e936a3b-d95f-44e5-996a-7b8ef1f5d219","type":"ColumnDataSource"}],"root_ids":["589169b0-f43d-494b-a44a-41fffcdf8492"]},"title":"Bokeh Application","version":"0.12.5"}};
+              var render_items = [{"docid":"92a3c291-6064-413a-85b1-95b039bcb5ae","elementid":"432a4736-6af0-46c1-8c63-912972f9f88c","modelid":"589169b0-f43d-494b-a44a-41fffcdf8492"}];
+              
+              Bokeh.embed.embed_items(docs_json, render_items);
+            });
+          };
+          if (document.readyState != "loading") fn();
+          else document.addEventListener("DOMContentLoaded", fn);
+        })();
+        
+        </script>
+    </body>
+</html>
